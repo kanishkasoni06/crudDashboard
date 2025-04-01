@@ -57,4 +57,12 @@ export const { signIn, signOut, auth } = NextAuth({
       return session;
     },
   },
+  events: {
+    async signOut({ session, token }) {
+      // This ensures the session cookie is deleted when signOut is called
+      const response = new Response();
+      response.cookies.delete('next-auth.session-token');
+      response.cookies.delete('__Secure-next-auth.session-token');
+    }
+  }
 });
