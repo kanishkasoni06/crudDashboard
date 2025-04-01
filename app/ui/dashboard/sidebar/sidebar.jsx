@@ -5,8 +5,6 @@ import {
   MdDashboard,
   MdSupervisedUserCircle,
   MdShoppingBag,
-  MdOutlineSettings,
-  MdHelpCenter,
   MdLogout,
 } from "react-icons/md";
 import { auth, signOut } from "@/app/auth";
